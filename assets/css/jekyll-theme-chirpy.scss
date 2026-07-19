@@ -1,0 +1,40 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+#sidebar {
+  background: linear-gradient(165deg, #0d1b2a 0%, #1b3a4b 70%, #23566b 100%);
+}
+
+#sidebar .site-title a {
+  color: #e8f1f2;
+}
+
+#sidebar .site-subtitle {
+  color: #a3c4cf;
+}
+
+#sidebar .nav-link {
+  color: #b9d3dc;
+}
+
+#sidebar .nav-item.active .nav-link {
+  color: #ffffff;
+}
+
+#sidebar .sidebar-bottom a,
+#sidebar .sidebar-bottom button {
+  color: #a3c4cf;
+}
